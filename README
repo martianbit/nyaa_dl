@@ -3,3 +3,17 @@ Automatization of downloading anime episodes one by one from the site nyaa.si.
 
 It's useful when you wanna watch anime that's still airing.
 
+How to use
+	- Install python3 and python3-pip
+	- Make sure they're accessible as /usr/bin/python and /usr/bin/pip
+	- Install qBittorrent
+	- Launch it
+	- Go to Tools > Preferences > Web UI
+	- Check in "Web User Interface (Remote control)"
+	- Change "IP address" to 127.0.0.1
+	- Change "Port" to 1317
+	- Check in "Bypass authentication for clients on localhost"
+	- Click Apply
+	- Run install.sh as root
+	- Enjoy your anime!
+
