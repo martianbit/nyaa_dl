@@ -56,7 +56,7 @@ parser.add_argument("-d", "--digits", type=int,
 	                help="number of digits in episode index, defaults to 2")
 
 parser.add_argument("-p", "--tpath", type=str,
-	                help="dir path, the program saves the .torrent here, defaults to \"./torrents\"")
+	                help="dir path, the program saves the .torrent files here, defaults to \"./torrents\"")
 
 parser.add_argument("-P", "--vpath", type=str,
 	                help="dir path, qb should save the video files here, defaults to ./S1")
