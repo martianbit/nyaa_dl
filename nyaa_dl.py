@@ -105,11 +105,14 @@ def fetch_feed(cst):
 def dl_by_id(_id):
 	tfp = join(tpath, _id + ".torrent")
 
-	if isfile(tfp):
-		print(".torrent file is already down")
-	else:
-		print("dling .torrent file")
+	print("checking if .torrent file is already down... ", end="")
 
+	if isfile(tfp):
+		print("yes")
+	else:
+		print("no")
+
+		print("dling .torrent file")
 		tr = send_req("https://nyaa.si/download/{}.torrent".format(_id))
 
 		print("saving .torrent file")
@@ -159,7 +162,7 @@ if mode == Mode.AUTO:
 	else:
 		end = args.end
 
-	print("scraping eps from {} to {}".format(start, end))
+	print("scraping eps from E{} to E{}".format(start, end))
 
 	for i in range(start, end + 1):
 		print("next target is E" + str(i))
