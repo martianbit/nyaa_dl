@@ -145,7 +145,7 @@ if mode == Mode.AUTO:
 				continue
 
 			try:
-				start = max(int(bn[1:(1 + digits)]), start)
+				start = max(int(bn[1:(bn.index("."))]), start)
 				ns = True
 			except:
 				pass
