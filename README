@@ -1,7 +1,7 @@
 NYAA DL
-Automatization of downloading anime episodes one by one from the site nyaa.si.
+A CLI tool for the site nyaa.si including automatization.
 
-It's useful when you wanna watch anime that's still airing.
+It's really useful when you wanna watch anime that's still airing.
 
 How to use
 	- Install python3 and python3-pip
@@ -16,4 +16,6 @@ How to use
 	- Click Apply
 	- Run install.sh as root
 	- Enjoy your anime!
+
+(The filenames in vpath are supposed to be E1.*, E2.* and so on)
 
