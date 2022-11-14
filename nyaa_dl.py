@@ -2,7 +2,7 @@
 
 from math import floor, log
 from time import sleep
-from os.path import isfile, join, abspath, basename
+from os.path import isfile, isdir, join, abspath, basename
 import re
 from glob import glob
 from enum import Enum, auto
@@ -74,6 +74,11 @@ def fill0(n, d):
 
 	return r
 
+def check_dir(dp, name):
+	if not isdir(dp):
+		print("no such dir: {} ({})".format(dp, name))
+		exit(1)
+
 def send_req(url):
 	res = None
 
@@ -126,6 +131,9 @@ def dl_by_id(_id):
 	tfr = open(tfp, "rb")
 	qb.download_from_file(tfr, savepath=vpath)
 	tfr.close()
+
+check_dir(tpath, "tpath")
+check_dir(vpath, "vpath")
 
 if mode == Mode.AUTO:
 	start = 1
