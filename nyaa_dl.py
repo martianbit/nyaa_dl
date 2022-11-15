@@ -86,7 +86,7 @@ def send_req(url):
 
 	while True:
 		try:
-			res = requests.get(url)
+			res = requests.get(url, timeout=10)
 			success = (res.status_code == 200)
 		except:
 			pass
