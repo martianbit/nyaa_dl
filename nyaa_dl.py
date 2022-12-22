@@ -182,7 +182,7 @@ if mode == Mode.AUTO:
 		id_si = id_ei = None
 
 		try:
-			ti = st.index(cst)
+			ti = st.index(cst, st.index("<div class=\"table-responsive\">"))
 
 			id_si = st.index(KW_1, ti) + len(KW_1)
 			id_ei = st.index(".torrent", id_si)
